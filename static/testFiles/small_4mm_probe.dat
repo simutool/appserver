@@ -1,0 +1,200 @@
+! -------------------------------------------------------
+! Efield input file
+! File exported by VISUAL-ENVIRONMENT : Version11.5 
+!      on 2016-6-3, at 12Hr:2min
+! -------------------------------------------------------
+
+
+! Input and Output file -----
+
+#INPUTFILE
+ small_4mm_probe
+
+#OUTPUTFILE
+ small_4mm_probe
+
+#SOLUTIONFILE
+ small_4mm_probe
+
+
+! Material File -----
+
+#MATERIALFILE
+ small_4mm_probe.mtr
+
+#TEMPFILEDIR
+ .
+
+
+! Time Convention -----
+
+#TIME_CONVENTION
+  Input  Plus
+  Output  Plus
+
+! Frequency -----
+
+#FREQUENCY
+ 1
+ 2450
+
+
+#PORTS
+Format_MMtoMS
+ 2
+Format_MStoMM
+ 5
+NetCdfFormat
+ yes
+SaveModeSolution
+ no
+Port_name
+ PRT_1
+portID
+ 1
+port_type
+ port_mm
+OldOutputFormat
+ yes
+VisualizationOutput
+ no
+coord_sys
+ 0.1 0.25342 0.10377
+ 0.00964 0.25342 0.10377
+ 0.1 -0.74658 0.10377
+coord_sys_name
+ R_1
+modeSolverTriFields
+ no
+Scaling
+ E.E
+numberOfModesTEM
+ 0
+numberOfModesTE
+ 1
+numberOfModesTM
+ 0
+numberOfModesHYB
+ 0
+modesolver
+ homogeneous
+ asciiformat
+ yes
+ shiftSigma
+ -1
+ approximationOrder
+ 4
+ maximumIterations
+ 300
+ skippingThresHold
+ 0.0001
+ maxNumberOfNNZPerRow
+ 100
+ factorisation
+ Cholesky
+
+
+
+
+
+
+! Excitations and Sources -----
+ 
+#INCIDENTFIELD_MODES
+ 1
+ 
+ 1
+ MODE 
+ portnr 1
+ modeloc 1
+ modeglob 1
+ FIELDS
+ 3
+ NEARFIELD2
+ CURRENTS
+ MODES
+ 
+
+#OUTPUTMODULE
+ NetCdfPUTGETVAR
+  ncputget_default
+ SaveSolution
+  no
+ SaveSystemMatrix
+  no
+ SaveSystemRhs
+  no
+ LoadCompensation
+  yes
+ NetCdfFormat
+  yes
+ NetCDFtoERF
+  yes
+ PrintMesh
+  yes
+ PrintCur
+  yes
+  ElementNodalResult
+  AverageOnNode yes
+  Electric
+  yes
+  Magnetic
+  yes
+  Wire
+  yes
+ PrintFarField
+   yes
+  TotalField
+   no
+  ScatteredField
+   yes
+  IncidentField
+   no
+ PrintNearField
+   yes
+  TotalField
+   no
+  ScatteredField
+   yes
+  IncidentField
+   no
+ PrintNearFieldSphere
+   yes
+  TotalField
+   no
+  ScatteredField
+   yes
+  IncidentField
+   no
+ PrintPowerField
+   yes
+  TotalField
+   no
+  ScatteredField
+   yes
+  IncidentField
+   no
+ PrintPort
+  yes
+  Mesh
+   yes
+  Modes
+   yes
+  ElementNodalResult
+  AverageOnNode yes
+
+
+
+
+#SOLVER
+  fem_solver
+  ! setPardisoEnv yes
+
+
+
+
+! Misc -----
+
+#LENGTH_UNIT
+ m
+

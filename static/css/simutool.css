@@ -1,0 +1,225 @@
+/** Color Scheme
+Very light blue for the background and light text: #feffff
+
+Lighter blue for accent: #c8e7f5
+
+Dark blue for buttons, dark text and accents: #1c77a0
+
+If you need more colors use a color picker and choose matching colors!
+**/
+
+/** Simutool Look **/
+body {
+    background: #feffff;
+}
+.statusbar {
+    background: black;
+    border-bottom: 15px white solid;
+}
+.statusbar a {
+    color: #feffff;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #1c77a0;
+}
+.btn.btn-default, .btn.btn-primary  {
+    background-color: #1c77a0;
+    color: #feffff;
+}
+
+/* Menu */
+ul.dropdown-menu {
+    width: -webkit-fill-available;
+}
+
+/*.navbar-nav.navbar-right a:visited {
+    color: #EBEDEF;
+}
+*/
+
+.navbar-nav.navbar-right a:link, a:hover, a:active a:focus a:hover {
+    color: #feffff;
+}
+
+
+.navbar-nav.navbar-right >.open{
+    width: 240px;
+    display: inline-grid;
+}
+
+/* Navbar */
+.navbar.navbar-default.navbar-fixed-top {
+    background: white;
+    color: #1c77a0;
+}
+div.collapse.navbar-collapse.navbar-ex1-collapse ul >.open a:active {
+    color: #feffff;
+}
+div.collapse.navbar-collapse.navbar-ex1-collapse ul a {
+    color: #1c77a0;
+    font-size: medium;
+}
+.container-fluid>.navbar-collapse {
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    border-top: 10px;
+    background: #1c77a0;
+    color: #feffff;
+    font-weight: 400;
+    margin-top: 30px;
+    position: relative;
+    padding: 20px 10px;
+}
+.footer > .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px 0px 20px 0px;
+}
+.footer a {
+    color: #feffff;
+    font-weight: bold;
+}
+/** Simutool Look End **/
+
+/** Grid View **/
+table {
+    background-color: #feffff;
+}
+.simutool_grid tbody {
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+}
+.simutool_grid tbody tr{
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+.simutool_grid tbody td {
+    vertical-align: middle;
+    padding: 5px;
+}
+.simutool_grid tbody td:first-child{
+    background-color: #1c77a0;
+    color: #feffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    width: 250px;
+    max-width: 300px;
+    padding: 8px;
+}
+.simutool_grid thead th,
+.simutool_grid tfoot td {
+    background-color: #c8e7f5;
+    padding: 10px 5px;
+}
+.simutool_grid thead th a{
+    color: #1c77a0;
+}
+.simutool_grid form {
+    width: 100%;
+    display: inline;
+    vertical-align: middle;
+    margin: 0 0 0 5px;
+}
+/** Grid View End **/
+
+/** Details View **/
+/* Title */
+.simutool_grid #simutool_view_entry form > div:nth-of-type(1){
+    grid-row:1;
+    border:none;
+}
+.simutool_grid #simutool_view_entry form > div:nth-of-type(1) label{
+    display: none;
+}
+.simutool_grid #simutool_view_entry form > div:nth-of-type(1) div{
+    font-size: 28px;
+}
+/* Data */
+.simutool_grid #simutool_view_entry form > div#t_data_upload__row div a{
+    border: solid;
+    width: 100px;
+    height: 80px;
+    color: #feffff;
+    background-color: #1c77a0;
+    border-color: #1c77a0;
+    padding: 2px 25px;
+}
+.simutool_grid #simutool_view_entry form > div#t_data_upload__row {
+    border: none;
+}
+.simutool_grid #simutool_view_entry form > div#t_data_upload__row div{
+    height: 40px;
+    margin-top: 15px;
+}
+
+.simutool_grid #simutool_view_entry form.form-horizontal.web2py_form {
+    width: 60%;
+    display: grid;
+    margin-left: 20%;
+}
+.simutool_grid #simutool_view_entry form > div label.readonly.control-label.col-sm-3 {
+    text-align: left;
+    padding: 0px;
+}
+.simutool_grid #simutool_view_entry form > div > div {
+    margin: 10px 0px;
+    height: auto;
+}
+.simutool_grid #simutool_view_entry form > div {
+    display: grid;
+    border-style: solid;
+    border-width: 0px 0px 1px;
+}
+/** Details View End **/
+
+/** Info Boxes **/
+.simutool_grid div#grid_title {
+    display: inline-block;
+    margin-top: 40px;
+}
+.simutool_grid div#grid_title h2 {
+    float: left;
+}
+.simutool_grid button#info_btn {
+    width: 25px;
+    height: 29px;
+    background-color: #1c77a0;
+    border-radius: 100%;
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 2px;
+    text-align: center;
+    align-self: center;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    float: left;
+    padding-left: 11px;
+}
+.simutool_grid div#info-field {
+    background-color: #c8e7f5;
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    height: auto;
+    width: auto;
+    max-width: 600px;
+    padding: 10px;
+    margin-left: 2px;
+    float: left;
+    margin-top: 20px;
+    position: static;
+}
+
+.simutool_grid div#info-field span#blue {
+    color: #1c77a0;
+}
+/** Info Boxes End **/

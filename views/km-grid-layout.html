@@ -1,0 +1,31 @@
+{{extend 'layout.html'}}
+
+<div class="simutool_grid">
+{{if 'view' in request.args:}}
+    <h2>{{=extra.get('sing', '')}} Details</h2>
+    <div id='simutool_view_entry'>{{=form}}</div>
+{{elif 'new' in request.args:}}
+    <div id="grid_title">
+        <h2>New {{=extra.get('sing', '')}}</h2>
+        {{if extra.get('html_info', False):}}
+            <button id="info_btn" data-toggle="collapse" data-target="#info-field">i</button>
+            <div class="collapse" id="info-field">{{=XML(extra['html_info'])}}</div>
+        {{pass}}
+    </div>
+    <div id='simutool_new_entry'>{{=form}}</div>
+{{elif 'edit' in request.args:}}
+    <div id="grid_title">
+        <h2>Edit {{=extra.get('pl', '')}}</h2>
+        {{if extra.get('html_info', False):}}
+            <button id="info_btn" data-toggle="collapse" data-target="#info-field">i</button>
+            <div class="collapse" id="info-field">{{=XML(extra['html_info'])}}</div>
+        {{pass}}
+    </div>
+    <div id='simutool_edit_entry'>{{=form}}</div>
+{{else:}}
+    <div id="grid_title">
+        <h2>Browse {{=extra.get('pl', '')}}</h2>
+    </div>
+    <div>{{=form}}</div>
+{{pass}}
+</div>

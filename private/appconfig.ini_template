@@ -1,0 +1,64 @@
+; App configuration
+[app]
+view_name       = SIMUTOOL Knowledge Management Suite Application Server
+description 	= The Web Client to access and manage the contents of the Knowledge Management System.
+app_name 		= appserver
+
+maintainer     	= maintainer.fullname <maintainer.email>
+maintainer_eml	= maintainer.email
+
+base_url 		=  http://127.0.0.1:8000
+
+sponsor_website = http://simutool.com
+bottom_logo		= static/images/small-logo.png
+
+document_endpoint = /kg/api?type=document 
+id_gen_endpoint = /data/api/unique-name?fn=
+inheritance_query_endpoint = /kg/api?type=KBMSThing
+create_activity_endpoint = /kg/api?type=Activity
+
+
+; Authentication db
+[auth_db]
+db_url_login	 = sqlite://storage.sqlite
+migrate   		 = true
+fake_migrate_all = true
+pool_size 		 = 10 ; ignored for sqlite
+admn_grp 	 	 = admin
+non_admn_grp 	 = simutool
+
+
+[garph_db]
+graph_url 	= graph.host.url
+graph_user	= graph.user
+graph_pass  = graph.pass
+
+
+[file_server]
+fs_download_url = /appserver/data/api/document?fn=
+
+
+;Fields for the first time start-up
+[first_startup]
+admin_email = john.doe@uni-bamberg.de
+admin_pass = test1234
+
+
+; Host configuration
+[host]
+names = localhost:*, 127.0.0.1:*, *:*, *
+
+
+; form styling
+[forms]
+formstyle = bootstrap3_inline
+separator = 
+
+
+; smtp address and credentials
+[smtp]
+server = smtp.server
+sender = smtp.email@address.com
+login  = smtp.user:smtp.password
+tls    = true
+ssl    = 
